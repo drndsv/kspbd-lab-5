@@ -1,6 +1,5 @@
 package ru.rsreu.denisova.lab5;
 
-
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import jakarta.servlet.http.HttpServletRequest;
@@ -8,9 +7,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.eclipse.birt.core.framework.Platform;
 import org.eclipse.birt.report.engine.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,15 +48,15 @@ public class Birt {
         IRunAndRenderTask task = null;
 
         try {
-            IReportRunnable report =
-                    reportEngine.openReportDesign("users.rptdesign");
+            ClassPathResource resource = new ClassPathResource("reports/users.rptdesign");
+            InputStream inputStream = resource.getInputStream();
+
+            IReportRunnable report = reportEngine.openReportDesign(inputStream);
 
             task = reportEngine.createRunAndRenderTask(report);
 
             Map<String, Object> params = new HashMap<>();
-            params.put("p_id",
-                    (id == null || id.isEmpty()) ? null : Integer.parseInt(id));
-
+            params.put("p_id", (id == null || id.isBlank()) ? null : Integer.parseInt(id));
             task.setParameterValues(params);
 
             PDFRenderOption options = new PDFRenderOption();

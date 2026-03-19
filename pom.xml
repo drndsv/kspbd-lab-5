@@ -27,7 +27,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -71,11 +71,46 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.birt</groupId>
             <artifactId>org.eclipse.birt.report.engine</artifactId>
             <version>4.23.0</version>
+            <scope>compile</scope>
         </dependency>
-
+        <!-- Source: https://mvnrepository.com/artifact/org.eclipse.birt/org.eclipse.birt.core -->
+        <dependency>
+            <groupId>org.eclipse.birt</groupId>
+            <artifactId>org.eclipse.birt.core</artifactId>
+            <version>4.23.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/org.eclipse.birt/org.eclipse.birt.report.model -->
+        <dependency>
+            <groupId>org.eclipse.birt</groupId>
+            <artifactId>org.eclipse.birt.report.model</artifactId>
+            <version>4.23.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/org.eclipse.birt/org.eclipse.birt.report.engine.emitter.config -->
+        <dependency>
+            <groupId>org.eclipse.birt</groupId>
+            <artifactId>org.eclipse.birt.report.engine.emitter.config</artifactId>
+            <version>4.23.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt</groupId>
+            <artifactId>org.eclipse.birt.report.engine.emitter.pdf</artifactId>
+            <version>4.23.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt</groupId>
+            <artifactId>org.eclipse.birt.report.engine.script.javascript</artifactId>
+            <version>4.23.0</version>
+        </dependency>
         <dependency>
             <groupId>org.eclipse.birt</groupId>
             <artifactId>org.eclipse.birt.report.data.oda.jdbc</artifactId>
