@@ -241,6 +241,7 @@
     </page-setup>
     <body>
         <label id="40">
+            <property name="fontSize">16pt</property>
             <property name="fontWeight">bold</property>
             <property name="textAlign">center</property>
             <text-property name="text">Отчет о зарегистрированных пользователях</text-property>
@@ -299,21 +300,29 @@
                 <row id="9">
                     <cell id="10">
                         <label id="11">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">medium</property>
                             <text-property name="text">id</text-property>
                         </label>
                     </cell>
                     <cell id="12">
                         <label id="13">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">medium</property>
                             <text-property name="text">login</text-property>
                         </label>
                     </cell>
                     <cell id="14">
                         <label id="15">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">medium</property>
                             <text-property name="text">name</text-property>
                         </label>
                     </cell>
                     <cell id="16">
                         <label id="17">
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">medium</property>
                             <text-property name="text">role</text-property>
                         </label>
                     </cell>
