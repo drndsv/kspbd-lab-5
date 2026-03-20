@@ -74,6 +74,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+
+        <!--BIRT-->
         <dependency>
             <groupId>org.eclipse.birt</groupId>
             <artifactId>org.eclipse.birt.report.engine</artifactId>
